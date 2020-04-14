@@ -1,18 +1,18 @@
 <template>
   <v-container>
     <Global></Global>
-    <Charts></Charts>
+    <MapCharts></MapCharts>
   </v-container>
 </template>
 
 <script>
 import Global from "./Global";
-import Charts from "./Charts";
+import MapCharts from "./MapCharts";
 export default {
   name: "Dashboard",
   components: {
     Global,
-    Charts
+    MapCharts
   },
 
   data: () => ({})
