@@ -10,7 +10,7 @@
         <v-card-text>
           <v-list-item class="grow">
             <v-list-item-content>
-              <v-list-item-title><h3>Total</h3></v-list-item-title>
+              <v-list-item-title><h3>Infected</h3></v-list-item-title>
               <h3 class="mt-3">{{ stats.cases.total }}</h3>
             </v-list-item-content>
             <v-list-item-avatar color="grey darken-3">
@@ -78,10 +78,8 @@
         <v-card-text>
           <v-list-item class="grow">
             <v-list-item-content>
-              <v-list-item-title
-                ><h3>{{ stats.deaths.total }}</h3></v-list-item-title
-              >
-              <h3 class="mt-3">951754</h3>
+              <v-list-item-title><h3>Deaths</h3></v-list-item-title>
+              <h3 class="mt-3">{{ stats.deaths.total }}</h3>
             </v-list-item-content>
             <v-list-item-avatar color="grey darken-3">
               <v-img
@@ -118,6 +116,7 @@ export default {
           const res = await response.json();
           this.stats = res.response[0];
           this.isLoading = false;
+          console.log(this.stats);
         })
         .catch(err => {
           console.log(err);
